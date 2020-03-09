@@ -31,11 +31,11 @@ function select(obj) {
 }
 function focus(obj) {
     document.querySelectorAll(obj).forEach(el => {
-        el.addEventListener("blur", () => {
+        el.addEventListener("mouseleave", () => {
             el.style.transform = 'opacity:0.3'
             el.style.transition = 'transform .5s'
         })
-        el.addEventListener('focus', () => {
+        el.addEventListener('mouseenter', () => {
             el.stlye.transform = 'opacity:1'
             el.stlye.transition = 'transform .3s'
         })
